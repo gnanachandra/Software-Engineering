@@ -21,6 +21,15 @@ class Login:
 
 useremail=input("enter emailID:")
 password=input("enter password:")
+
+
+
+str="@vvit.net"
+if str not in useremail:
+    while(str not in useremail):
+        print("enter a valid email:")
+        useremail=input()
+
 object=Login(useremail,password)
 response=object.verifyDetails()
 if(response==1):
