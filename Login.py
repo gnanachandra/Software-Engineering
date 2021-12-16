@@ -18,17 +18,22 @@ class Login:
                     return 1
                 return 0
         return -1
+#end of class Login 
 
 useremail=input("enter emailID:")
-password=input("enter password:")
-
-
 
 str="@vvit.net"
 if str not in useremail:
     while(str not in useremail):
-        print("enter a valid email:")
+        print("enter a valid email(use organisation mail:):")
         useremail=input()
+
+password=input("enter password:")
+while(len(password)<5):
+    print("entered password is less than 5 characters ")
+    print("enter correct password")
+    password=input("enter password:")
+
 
 object=Login(useremail,password)
 response=object.verifyDetails()
